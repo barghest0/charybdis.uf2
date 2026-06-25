@@ -1,1 +1,2 @@
-zmk-config for charybdis (4x6)
+# charybdis.uf2
+charybdis zmk config
