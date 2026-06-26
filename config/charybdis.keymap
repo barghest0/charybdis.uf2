@@ -84,20 +84,13 @@
             timeout-ms = <40>;
             require-prior-idle-ms = <100>;
         };
-
-        combo_capslock {
-            bindings = <&kp CAPS>;
-            key-positions = <28 31>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <100>;
-        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         tri_fn {
-            if-layers = <NAV MOUSE>;
+            if-layers = <NAV SYM>;
             then-layer = <FN>;
         };
     };
@@ -113,7 +106,7 @@
 &none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G          &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &none
 &none  &kp Z        &kp X        &kp C         &kp V         &kp B          &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
                                  &lt SYM ESC   &lt NAV SPACE &lt NUM TAB    &none  &bspc_del
-                                               &sk LSHFT     &none          &lt MOUSE ENTER
+                                               &sk LSHFT     &mo SCROLL     &kp ENTER
             >;
         };
 
@@ -122,8 +115,8 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans     &trans      &trans  &kp DEL
 &trans  &trans  &trans  &trans  &trans  &trans     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans     &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT   &kp CAPS  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans     &trans      &trans    &trans
                         &trans  &trans  &trans     &trans     &trans
                                 &trans  &trans     &trans
             >;
@@ -170,7 +163,7 @@
             bindings = <
 &trans  &trans  &trans      &trans      &trans      &trans     &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans      &trans      &trans      &trans     &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &mkp MCLK   &mkp RCLK   &mkp LCLK   &trans     &trans  &mo SCROLL &mo SNIPE  &trans  &trans  &trans
+&trans  &mo SNIPE  &mkp MCLK   &mkp RCLK   &mkp LCLK   &trans     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans      &trans      &trans      &trans     &trans  &trans     &trans     &trans  &trans  &trans
                             &trans      &trans      &trans     &trans  &trans
                                         &trans      &trans     &trans
