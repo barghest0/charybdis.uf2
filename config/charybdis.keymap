@@ -106,7 +106,7 @@
 &none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G          &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &none
 &none  &kp Z        &kp X        &kp C         &kp V         &kp B          &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
                                  &lt SYM ESC   &lt NAV SPACE &lt NUM TAB    &none  &bspc_del
-                                               &sk LSHFT     &mo SCROLL     &kp ENTER
+                                               &sk LSHFT     &none          &kp ENTER
             >;
         };
 
@@ -163,10 +163,10 @@
             bindings = <
 &trans  &trans  &trans      &trans      &trans      &trans     &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans      &trans      &trans      &trans     &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &mo SNIPE  &mkp MCLK   &mkp RCLK   &mkp LCLK   &trans     &trans    &trans    &trans         &trans  &trans  &trans
+&trans  &trans  &trans      &trans      &trans      &trans     &trans    &trans    &trans         &trans  &trans  &trans
 &trans  &trans  &trans      &trans      &trans      &trans     &mkp MB4  &mkp MB5  &kp LC(LS(T))  &trans  &trans  &trans
-                            &trans      &trans      &trans     &trans  &trans
-                                        &trans      &trans     &trans
+                            &mo SCROLL  &trans      &mo SNIPE  &trans  &trans
+                                        &mkp LCLK   &mkp MCLK  &mkp RCLK
             >;
         };
 
