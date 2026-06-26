@@ -163,8 +163,8 @@
             bindings = <
 &trans  &trans  &trans      &trans      &trans      &trans     &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans      &trans      &trans      &trans     &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &mo SNIPE  &mkp MCLK   &mkp RCLK   &mkp LCLK   &trans     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &trans      &trans      &trans     &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &mo SNIPE  &mkp MCLK   &mkp RCLK   &mkp LCLK   &trans     &trans    &trans    &trans         &trans  &trans  &trans
+&trans  &trans  &trans      &trans      &trans      &trans     &mkp MB4  &mkp MB5  &kp LC(LS(T))  &trans  &trans  &trans
                             &trans      &trans      &trans     &trans  &trans
                                         &trans      &trans     &trans
             >;
