@@ -15,3 +15,10 @@
         events = <0>;
     };
 };
+
+// On the dongle kscan0 is inert (no compatible), so point the physical
+// layout at the mock scanner instead — its kscan phandle must resolve to a
+// real device. The matrix transform still maps the forwarded key events.
+&physical_layout_0 {
+    kscan = <&mock_kscan>;
+};
