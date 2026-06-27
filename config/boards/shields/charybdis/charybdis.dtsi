@@ -95,7 +95,9 @@
     };
 	
     kscan0: kscan {
-        compatible = "zmk,kscan-gpio-matrix";
+        // `compatible` is set per-half in charybdis_left/right.overlay so the
+        // dongle (which includes this file) gets an inert kscan node and does
+        // not demand col-gpios.
         label = "KSCAN";
 
         diode-direction = "row2col";
@@ -113,6 +115,21 @@
 	transform = <&default_transform>;
 	kscan = <&kscan0>;
 
+};
+
+/ {
+    // Split input: the trackball lives on the right peripheral and forwards
+    // its motion to the central (dongle) over BLE. The central binds an
+    // input-listener to this node (see config/charybdis.keymap).
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        trackball_split: trackball_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+        };
+    };
 };
 
 zephyr_udc0: &usbd {

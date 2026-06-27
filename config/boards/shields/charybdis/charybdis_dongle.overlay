@@ -1,0 +1,17 @@
+#include "charybdis.dtsi"
+
+/ {
+    chosen {
+        // Dongle has no physical keys; scanning is mocked. The matrix
+        // transform / physical layout come from charybdis.dtsi and map the
+        // key events forwarded from the two peripheral halves.
+        zmk,kscan = &mock_kscan;
+    };
+
+    mock_kscan: kscan_mock {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+};

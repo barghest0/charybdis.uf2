@@ -3,14 +3,17 @@
  *
  * SPDX-License-Identifier: MIT
  */
- 
+
 #include "charybdis.dtsi"
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &default_transform {
     col-offset = <6>;
-}; 
+};
 
 &kscan0 {
+	compatible = "zmk,kscan-gpio-matrix";
+
 	col-gpios
 		= <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 		, <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -51,22 +54,25 @@
 
     trackball: trackball@0 {
         status = "okay";
-        compatible = "pixart,pmw3610";
+        compatible = "pixart,pmw3610-alt";
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        automouse-layer = <5>;
-        scroll-layers = <6>;
-        snipe-layers = <7>;
+
+        cpi = <400>;
+        // Orientation: replaces the old CONFIG_PMW3610_ORIENTATION_90 +
+        // CONFIG_PMW3610_INVERT_X. Tweak swap-xy / invert-x / invert-y if the
+        // cursor moves along the wrong axis or in the wrong direction.
+        swap-xy;
+        invert-x;
+
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
     };
 };
 
-
-/ {
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-    };
+// Forward the local trackball's motion to the central (dongle) over the split.
+&trackball_split {
+    device = <&trackball>;
 };
-
-
