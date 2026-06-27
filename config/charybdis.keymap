@@ -113,7 +113,7 @@
 &kp ESCAPE  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F   &kp G       &kp H            &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
 &none       &kp Z        &kp X        &kp C         &kp V          &kp B       &kp N            &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
                                       &kp LCTRL     &mo 2          &caps_td    &mo FN           &bspc_del
-                                                    &lt NAV SPACE  &lt 3 LS(LCTRL)  &kp ENTER
+                                                    &lt NAV SPACE  &mo 3       &kp ENTER
             >;
         };
 
@@ -144,12 +144,12 @@
         sym {
             display-name = "Sym";
             bindings = <
-&trans  &trans      &trans     &trans        &trans       &trans       &trans  &kp LESS_THAN   &kp GREATER_THAN  &trans          &trans         &trans
-&trans  &kp TILDE   &kp GRAVE  &kp ASTERISK  &kp PLUS     &kp EQUAL    &trans  &kp LBKT        &kp RBKT          &kp UNDERSCORE  &trans         &trans
-&trans  &kp DQT     &kp SQT    &kp QMARK     &kp EXCL     &kp COLON    &trans  &kp LPAR        &kp RPAR          &kp MINUS       &kp SEMICOLON  &trans
-&trans  &kp DOLLAR  &kp AMPS   &kp HASH      &kp AT_SIGN  &kp CARET    &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp SLASH       &kp PIPE       &trans
-                               &trans        &trans       &trans       &trans  &trans
-                                             &trans       &trans       &trans
+&trans  &trans      &trans     &trans        &trans           &trans       &trans  &kp LESS_THAN   &kp GREATER_THAN  &trans          &trans         &trans
+&trans  &kp TILDE   &kp GRAVE  &kp ASTERISK  &kp PLUS         &kp EQUAL    &trans  &kp LBKT        &kp RBKT          &kp UNDERSCORE  &trans         &trans
+&trans  &kp DQT     &kp SQT    &kp QUESTION  &kp EXCLAMATION  &kp COLON    &trans  &kp LPAR        &kp RPAR          &kp MINUS       &kp SEMICOLON  &trans
+&trans  &kp DOLLAR  &kp AMPS   &kp HASH      &kp AT_SIGN      &kp CARET    &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp SLASH       &kp PIPE       &trans
+                               &trans        &trans           &trans       &trans  &trans
+                                             &trans           &trans       &trans
             >;
         };
 
