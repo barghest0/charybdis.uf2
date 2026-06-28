@@ -108,8 +108,8 @@
         base {
             display-name = "Base";
             bindings = <
-&none       &none        &none        &none         &mo 7          &tog 6      &kp PRINTSCREEN  &none         &none         &none        &none           &kp RIGHT_BRACE
-&kp TAB     &kp Q        &kp W        &kp E         &kp R          &kp T       &kp Y            &kp U         &kp I         &kp O        &kp P           &kp LEFT_BRACE
+&kp GRAVE   &none        &none        &none         &mo 7          &tog 6      &kp PRINTSCREEN  &none         &none         &none        &none           &kp RBKT
+&kp TAB     &kp Q        &kp W        &kp E         &kp R          &kp T       &kp Y            &kp U         &kp I         &kp O        &kp P           &kp LBKT
 &kp ESCAPE  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F   &kp G       &kp H            &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
 &none       &kp Z        &kp X        &kp C         &kp V          &kp B       &kp N            &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
                                       &kp LCTRL     &mo 2          &caps_td    &mo FN           &bspc_del
@@ -144,10 +144,10 @@
         sym {
             display-name = "Sym";
             bindings = <
-&trans  &trans      &trans     &trans        &trans           &trans       &trans  &kp LESS_THAN   &kp GREATER_THAN  &trans          &trans         &trans
-&trans  &kp TILDE   &kp GRAVE  &kp ASTERISK  &kp PLUS         &kp EQUAL    &trans  &kp LBKT        &kp RBKT          &kp UNDERSCORE  &trans         &trans
-&trans  &kp DQT     &kp SQT    &kp AMPS      &kp EXCLAMATION  &kp COLON    &trans  &kp LPAR        &kp RPAR          &kp MINUS       &kp SEMICOLON  &trans
-&trans  &kp DOLLAR  &kp AMPS   &kp HASH      &kp AT_SIGN      &kp CARET    &kp PERCENT  &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp SLASH       &kp PIPE       &kp BSLH
+&trans  &trans     &trans     &trans     &trans     &trans       &trans      &trans    &trans    &trans      &trans  &trans
+&trans  &kp TILDE  &kp GRAVE  &kp BSLH   &kp PIPE   &trans       &trans      &kp LBRC  &kp RBRC  &trans      &trans  &trans
+&trans  &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp EQUAL   &kp LPAR  &kp RPAR  &kp UNDER   &trans  &trans
+&trans  &kp CARET  &kp AMPS   &kp ASTRK  &kp PLUS   &kp MINUS    &trans      &kp LBKT  &kp RBKT  &trans      &trans  &trans
                                &trans        &trans           &trans       &trans  &trans
                                              &trans           &trans       &trans
             >;
@@ -168,12 +168,12 @@
         mouse {
             display-name = "Scrollball";
             bindings = <
-&trans  &trans  &trans  &trans    &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &mkp MB4  &mkp MCLK  &mkp MB5     &trans  &trans
-                                  &mkp LCLK  &mkp RCLK    &trans
+&trans  &trans  &trans  &trans     &trans      &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans      &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &mo SNIPE  &mo SCROLL  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans      &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &mkp MB4   &mkp MCLK   &mkp MB5     &trans  &trans
+                                   &mkp LCLK   &mkp RCLK    &trans
             >;
         };
 
